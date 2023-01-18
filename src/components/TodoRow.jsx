@@ -10,9 +10,9 @@ const TodoRow = ({task, checked, completeList, setCompleteList}) => {
         setCompleteList(newList);
     }
   return (
-    <div>
+    <div className='my-2 text-gray-600 '>
         {!done && 
-        <div className='flex'>
+        <div className='flex gap-x-2 text-sm font-semibold'>
         <input onChange={handleChange}
         className='accent-red-500' checked={checked} type="checkbox" id="check"/>
         <label className='sr-only' htmlFor='check' >Checkbox</label>

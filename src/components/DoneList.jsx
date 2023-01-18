@@ -1,11 +1,10 @@
  import React from 'react'
 import DoneRow from './DoneRow'
-import TodoRow from './TodoRow'
  
  const DoneList = ({doneList, setDoneList, incompleteList, setIncompleteList}) => {
     console.log('donelist:', incompleteList)
    return (
-     <div>
+     <div className='w-[85%] mx-auto'>
         <h3>Things done</h3>
         {
            doneList.map((task, index) => {
