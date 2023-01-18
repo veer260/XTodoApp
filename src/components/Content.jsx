@@ -1,21 +1,23 @@
 import React, { useState } from 'react'
+import DoneList from './DoneList';
 import Header from './Header';
 import TodoList from './TodoList';
 
 const Content = () => {
     console.log('content running');
-    const [compltetList, setCompleteList ] = useState([
+    const [incompleteList, setIncompleteList ] = useState([
         'Clean my Computer',
         'Buy a keyboard'
     ])
-    const [incompleteList, setIncompleteList] = useState([
+    const [completeList, setCompleteList] = useState([
         'Write an article'
     ]);
 
   return (
     <div>
         <Header />
-        <TodoList list={compltetList} setList={setCompleteList} />
+        <TodoList list={incompleteList} setList={setIncompleteList} completeList={completeList} setCompleteList={setCompleteList} />
+        <DoneList doneList={completeList} setDoneList={setCompleteList} incompleteList={incompleteList} setIncompleteList={setIncompleteList} />
     </div>
   )
 }
