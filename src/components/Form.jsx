@@ -3,6 +3,12 @@ import { Link} from 'react-router-dom'
 
 const Form = ({list, setList}) => {
     const [ task, setTask] = useState('');
+    // const  = '/';
+    let target = '/addForm';
+    if(task) {
+        target = '/'
+    }
+    
     console.log('task:',task)
     const handleClick = () => {
         console.log('hello');
@@ -15,7 +21,10 @@ const Form = ({list, setList}) => {
     const handleSave = () => {
         console.log('handleSave running')
         let newlist = [...list];
-        newlist.push(task);
+        if(task) {
+            newlist.push(task);
+        }
+        
         console.log('newList:', newlist)
         setList(newlist);
         console.log('list:', list);
@@ -32,7 +41,7 @@ const Form = ({list, setList}) => {
 
         <div className='flex gap-x-4'>
             <Link onClick={handleSave} 
-            className='px-4 py-1 hover:bg-red-600 bg-red-500 font-semibold text-white rounded-md shadow-sm ' to={'/'}>Save</Link>
+            className='px-4 py-1 hover:bg-red-600 bg-red-500 font-semibold text-white rounded-md shadow-sm ' to={target}>Save</Link>
 
             <Link className='px-4 py-1 border rounded-md shadow-sm' to={'/'} >Cancel</Link>
         </div>

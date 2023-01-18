@@ -14,7 +14,7 @@ const TodoRow = ({task, checked, completeList, setCompleteList}) => {
         {!done && 
         <div className='flex gap-x-2 text-sm font-semibold'>
         <input onChange={handleChange}
-        className='accent-red-500' checked={checked} type="checkbox" id="check"/>
+        className='accent-red-500 w-4' checked={checked} type="checkbox" id="check"/>
         <label className='sr-only' htmlFor='check' >Checkbox</label>
         <p>{task}</p>
     </div>

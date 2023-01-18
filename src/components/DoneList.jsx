@@ -5,7 +5,7 @@ import DoneRow from './DoneRow'
     console.log('donelist:', incompleteList)
    return (
      <div className='w-[85%] mx-auto'>
-        <h3>Things done</h3>
+        <h3 className='font-semibold text-xl my-4'>Things done</h3>
         {
            doneList.map((task, index) => {
             return (
